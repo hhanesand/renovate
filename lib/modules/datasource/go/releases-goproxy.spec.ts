@@ -1832,7 +1832,7 @@ describe('modules/datasource/go/releases-goproxy', () => {
         await expect(
           packageCache.get(
             'datasource-go-proxy-timestamps',
-            `${baseUrl}@@github.com/google/btree`,
+            `${baseUrl}:github.com/google/btree`,
           ),
         ).resolves.toBeUndefined();
       });
@@ -1860,7 +1860,7 @@ describe('modules/datasource/go/releases-goproxy', () => {
         await expect(
           packageCache.get(
             'datasource-go-proxy-timestamps',
-            `${baseUrl}@@github.com/google/btree`,
+            `${baseUrl}:github.com/google/btree`,
           ),
         ).resolves.toEqual({ 'v1.0.0': '2018-01-01T00:00:00.000Z' });
       });
